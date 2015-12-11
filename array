@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* 
+Ask user for input until count reaches 50 or input is -999.
+Output user input
+*/
+
+#define DAYS 5
+int main() {
+    double array[DAYS] = {0.0}; // initialize array of 5 integers to 0
+    double total = 0.0, average; //
+    int i;
+    
+    for (i = 0; i < DAYS; i++){ //
+        printf("Enter number %i \n", i + 1);
+        scanf("%lf", &array[i]);
+        
+    }
+    
+    for (i = 0; i < DAYS; i++){
+       // total = total + array[i];
+       total += array[i];
+    }
+    
+    average = total / DAYS;
+    
+    printf("The total is %.2lf \n", total);
+    printf("The average is %.2lf \n", average);
+    return 0;
+}
+
